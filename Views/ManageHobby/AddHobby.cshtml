@@ -1,0 +1,23 @@
+﻿@model mvcdrc.Models.tblhobby
+
+@{
+    ViewBag.Title = "AddHobby";
+}
+
+<h2>AddHobby</h2>
+@using (Html.BeginForm("AddHobby", "ManageHobby", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td> Hobby Name</td>
+            <td>@Html.TextBoxFor(m => m.hname)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="save" /></td>
+        </tr>
+
+    </table>
+
+}
+

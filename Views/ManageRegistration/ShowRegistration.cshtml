@@ -1,0 +1,38 @@
+﻿@model IEnumerable<mvcdrc.Models.RegistrationJoin>
+@{
+    ViewBag.Title = "ShowRegistration";
+}
+
+<h2>ShowRegistration</h2>
+<table style="background-color:darkgray;color:white;width:300px">
+    <tr style="background-color:orangered;height:40px">
+        <th>User Id</th>
+        <th>User Name</th>
+        <th>User Email</th>
+        <th>User Password</th>
+        <th>User Department</th>
+        <th>User Gender</th>
+        <th>User Hobbies</th>
+
+        <td></td>
+        <td></td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.rid</td>
+            <td>@item.rname</td>
+            <td>@item.remail</td>
+            <td>@item.rpassword</td>
+            <td>@item.rdepartment</td>
+            <td>@item.rgender</td>
+            <td>@item.rhobbies</td>
+            <td>@Html.ActionLink("Delete", "DeleteRegistration", new { A = item.rid })</td>
+            <td>@Html.ActionLink("Edit", "AddRegistratioin", new { A = item.rid })</td>
+        </tr>
+    }
+</table>
+
+
+

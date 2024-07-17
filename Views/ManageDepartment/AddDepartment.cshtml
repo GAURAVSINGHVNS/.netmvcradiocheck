@@ -1,0 +1,22 @@
+﻿@model mvcdrc.Models.tbldepartment
+@{
+    ViewBag.Title = "AddDepartment";
+}
+
+<h2>AddDepartment</h2>
+@using(Html.BeginForm("AddDepartment","ManageDepartment",FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td> Department Name</td>
+            <td>@Html.TextBoxFor(m => m.dname)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit"value="save" /></td>
+        </tr>
+
+    </table>
+
+ }
+

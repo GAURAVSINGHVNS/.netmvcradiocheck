@@ -1,0 +1,22 @@
+﻿@model mvcdrc.Models.tblgender
+@{
+    ViewBag.Title = "AddGender";
+}
+
+<h2>AddGender</h2>
+@using (Html.BeginForm("AddGender", "ManageGender", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td> Gender Name</td>
+            <td>@Html.TextBoxFor(m => m.gname)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="save" /></td>
+        </tr>
+
+    </table>
+
+}
+

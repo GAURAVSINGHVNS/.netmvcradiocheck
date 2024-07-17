@@ -1,0 +1,21 @@
+﻿@model IEnumerable<mvcdrc.Models.tbldepartment>
+@{
+    ViewBag.Title = "ShowDepartment";
+}
+
+<li>@Html.ActionLink("Add  new department", "Adddepartment", "Managedepartment", new { area = "" }, new { @class = "nav-link" })</li>
+<table style="background-color:darkgray;color:white;width:300px">
+    <tr style="background-color:orangered;height:40px">
+        <th>Department Id</th>
+        <th>Department Name</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr style="height:30px">
+            <td>@item.did</td>
+            <td>@item.dname</td>
+        </tr>
+    }
+</table>
+

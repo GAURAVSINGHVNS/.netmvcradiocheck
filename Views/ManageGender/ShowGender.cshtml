@@ -1,0 +1,21 @@
+﻿@model IEnumerable<mvcdrc.Models.tblgender>
+@{
+    ViewBag.Title = "ShowGender";
+}
+
+<li>@Html.ActionLink("Add  new gender", "AddGender", "ManageGender", new { area = "" }, new { @class = "nav-link" })</li>
+<table style="background-color:darkgray;color:white;width:300px">
+    <tr style="background-color:orangered;height:40px">
+        <th>Gender Id</th>
+        <th>Gender Name</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr style="height:30px">
+            <td>@item.gid</td>
+            <td>@item.gname</td>
+        </tr>
+    }
+</table>
+

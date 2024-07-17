@@ -1,0 +1,22 @@
+﻿@model IEnumerable<mvcdrc.Models.tblhobby>
+
+@{
+    ViewBag.Title = "ShowHobby";
+}
+
+<li>@Html.ActionLink("Add hobby", "AddHobby", "ManageHobby", new { area = "" }, new { @class = "nav-link" })</li>
+<table style="background-color:darkgray;color:white;width:300px">
+    <tr style="background-color:orangered;height:40px">
+        <th>Hobby Id</th>
+        <th>Hobby Name</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr style="height:30px">
+            <td>@item.hid</td>
+            <td>@item.hname</td>
+        </tr>
+    }
+</table>
+
